@@ -4,16 +4,16 @@
 % Description: This is an unofficial Oxford University Beamer Template I made from scratch. Feel free to use it, modify it, share it.
 % Version: 1.0
 
-\documentclass[notes]{beamer}
+% \documentclass[notes]{beamer}
 % \documentclass[notes=only]{beamer}   % only notes
-% \documentclass{beamer}
+\documentclass{beamer}
 \input{Theme/Packages.tex}
 \usetheme{oxonian}
 
-\title{Notes on the development and uses of network science}
+\title{Notes on the development of scale-free network models}
 \titlegraphic{\includegraphics[width=\textwidth]{Theme/Logos/networks-title-img.png}}
 \author{Matthew Turner}
-\institute{University of California, Merced}
+\institute{UC Merced, Kello lab meeting}
 \date{\today}
 
 \begin{document}
@@ -52,99 +52,99 @@ disseminate network data that would have been difficult to store, share, and
 process were it not for advances in computing technology.}
 
 
-\begin{frame}{Outline}
-  \begin{enumerate}
-    \item My motivation for studying network science.
-    \item Historical \& mathematical development of network models.
-      \begin{itemize}
-        \item Focus on shortcomings of random graph models and how scale-free
-          network models solves them.
-      \end{itemize}
-    \item Networks in linguistic representations (CK).
-  \end{enumerate}
-\end{frame}
-\note{Why focus on scale-free network models? Because these are the most 
-parsimonious model (i.e.\ faithful, simple, and explanatory) of this wide variety 
-of observed behavior.}
+% \begin{frame}{Outline}
+%   \begin{enumerate}
+%     \item My motivation for studying network science.
+%     \item Historical \& mathematical development of network models.
+%       \begin{itemize}
+%         \item Focus on shortcomings of random graph models and how scale-free
+%           network models solves them.
+%       \end{itemize}
+%     \item Networks in linguistic representations (CK).
+%   \end{enumerate}
+% \end{frame}
+% \note{Why focus on scale-free network models? Because these are the most 
+% parsimonious model (i.e.\ faithful, simple, and explanatory) of this wide variety 
+% of observed behavior.}
 
-\begin{frame}{Personal motivation}
-  \begin{enumerate}
-    \item Understand the connection between social interaction networks and 
-      social clustering (consensus, ``bi-polarization'', or multiple clustering)
-      around knowledge, beliefs, opinions, attitudes etc. 
-    \item Understand the basis of network models of language and the evolution of language.
-    \item Build a critical knowledge base around networks to improve my work. 
-  \end{enumerate}
-\end{frame}
+% \begin{frame}{Personal motivation}
+%   \begin{enumerate}
+%     \item Understand the connection between social interaction networks and 
+%       social clustering (consensus, ``bi-polarization'', or multiple clustering)
+%       around knowledge, beliefs, opinions, attitudes etc. 
+%     \item Understand the basis of network models of language and the evolution of language.
+%     \item Build a critical knowledge base around networks to improve my work. 
+%   \end{enumerate}
+% \end{frame}
 
-\begin{frame}{French's model of the evolution of social power}
-  \centering
-  \includegraphics[width=0.8\textwidth]{Figures/FrenchPower.png}
-\end{frame}
+% \begin{frame}{French's model of the evolution of social power}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{Figures/FrenchPower.png}
+% \end{frame}
 
-\begin{frame}{Granovetter's ``strength of weak ties''}
-  \begin{itemize}
-    \item In many cases, e.g.\ finding a job, it is not our closest
-      ``friends'', but casual or second-degree acquaintances who influence us.
-    \item Compare to Heider's social balance theory---weak ties have a
-      pre-assigned valence based on strong ties.
-  \end{itemize}
-\end{frame}
+% \begin{frame}{Granovetter's ``strength of weak ties''}
+%   \begin{itemize}
+%     \item In many cases, e.g.\ finding a job, it is not our closest
+%       ``friends'', but casual or second-degree acquaintances who influence us.
+%     \item Compare to Heider's social balance theory---weak ties have a
+%       pre-assigned valence based on strong ties.
+%   \end{itemize}
+% \end{frame}
 
-\begin{frame}{Axelrod's model of ``The Dissemination of Culture''}
-  \begin{columns}[T]
-    \begin{column}{.48\textwidth}
-      Square lattice \\[1.5em]
-      \begin{tikzpicture} %[->,>=stealth',shorten >=2pt, line width=1pt, 
-        % node distance=2cm]  %, style ={minimum size=20mm}]
-      % \tikzstyle{every node}=[font=\huge]
-        \node [circle, draw] at (0, 0) (1) {}; % {$s_1(t)$};
-        \node [circle, draw] at (1, 0) (2) {}; % {$s_2(t)$};
-        \node [circle, draw] at (2, 0) (3) {}; % {$s_2(t)$};
-        \node [circle, draw] at (3, 0) (4) {}; % {$s_2(t)$};
+% \begin{frame}{Axelrod's model of ``The Dissemination of Culture''}
+%   \begin{columns}[T]
+%     \begin{column}{.48\textwidth}
+%       Square lattice \\[1.5em]
+%       \begin{tikzpicture} %[->,>=stealth',shorten >=2pt, line width=1pt, 
+%         % node distance=2cm]  %, style ={minimum size=20mm}]
+%       % \tikzstyle{every node}=[font=\huge]
+%         \node [circle, draw] at (0, 0) (1) {}; % {$s_1(t)$};
+%         \node [circle, draw] at (1, 0) (2) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (2, 0) (3) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (3, 0) (4) {}; % {$s_2(t)$};
 
-        \node [circle, draw] at (0, 1) (5) {}; % {$s_2(t)$};
-        \node [circle, draw] at (1, 1) (6) {}; % {$s_2(t)$};
-        \node [circle, draw] at (2, 1) (7) {}; % {$s_2(t)$};
-        \node [circle, draw] at (3, 1) (8) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (0, 1) (5) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (1, 1) (6) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (2, 1) (7) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (3, 1) (8) {}; % {$s_2(t)$};
 
-        \node [circle, draw] at (0, 2) (9) {}; % {$s_1(t)$};
-        \node [circle, draw] at (1, 2) (10) {}; % {$s_2(t)$};
-        \node [circle, draw] at (2, 2) (11) {}; % {$s_2(t)$};
-        \node [circle, draw] at (3, 2) (12) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (0, 2) (9) {}; % {$s_1(t)$};
+%         \node [circle, draw] at (1, 2) (10) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (2, 2) (11) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (3, 2) (12) {}; % {$s_2(t)$};
 
-        \node [circle, draw] at (0, 3) (13) {}; % {$s_2(t)$};
-        \node [circle, draw] at (1, 3) (14) {}; % {$s_2(t)$};
-        \node [circle, draw] at (2, 3) (15) {}; % {$s_2(t)$};
-        \node [circle, draw] at (3, 3) (16) {}; % {$s_2(t)$};
-        % \path  (b) edge [loop above] (b);
+%         \node [circle, draw] at (0, 3) (13) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (1, 3) (14) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (2, 3) (15) {}; % {$s_2(t)$};
+%         \node [circle, draw] at (3, 3) (16) {}; % {$s_2(t)$};
+%         % \path  (b) edge [loop above] (b);
 
-        % \node at (3, 1.75) {$W_{22}$};
+%         % \node at (3, 1.75) {$W_{22}$};
 
-        % \draw[->] (a) to [bend left=20] node[above, bend left] {$W_{21}$} (b) ;
-        % \draw[->] (b) to [bend left=20] node[below, bend left] {$W_{12}$} (a) ;
-        \draw[-] (1) to (2); \draw[-] (2) to (3); \draw[-] (3) to (4);
-        \draw[-] (5) to (6); \draw[-] (6) to (7); \draw[-] (7) to (8);
-        \draw[-] (9) to (10); \draw[-] (10) to (11); \draw[-] (11) to (12);
-        \draw[-] (13) to (14); \draw[-] (14) to (15); \draw[-] (15) to (16);
+%         % \draw[->] (a) to [bend left=20] node[above, bend left] {$W_{21}$} (b) ;
+%         % \draw[->] (b) to [bend left=20] node[below, bend left] {$W_{12}$} (a) ;
+%         \draw[-] (1) to (2); \draw[-] (2) to (3); \draw[-] (3) to (4);
+%         \draw[-] (5) to (6); \draw[-] (6) to (7); \draw[-] (7) to (8);
+%         \draw[-] (9) to (10); \draw[-] (10) to (11); \draw[-] (11) to (12);
+%         \draw[-] (13) to (14); \draw[-] (14) to (15); \draw[-] (15) to (16);
 
-        \draw[-] (1) to (5); \draw[-] (2) to (6); \draw[-] (3) to (7); \draw[-] (4) to (8);
-        \draw[-] (5) to (9); \draw[-] (6) to (10); \draw[-] (7) to (11); \draw[-] (8) to (12);
-        \draw[-] (9) to (13); \draw[-] (10) to (14); \draw[-] (11) to (15); \draw[-] (12) to (16);
-      \end{tikzpicture}
-    \end{column}
-    \hfill
-    \begin{column}{.48\textwidth}
-      \includegraphics[width=0.8\textwidth]{Figures/AxelrodExample.png}
-    \end{column}
-  \end{columns}
-\end{frame}
-\note{Assumes agents are connected via a square lattice; \emph{homophily} implemented
-as increased likelihood to interact with similar others.}
+%         \draw[-] (1) to (5); \draw[-] (2) to (6); \draw[-] (3) to (7); \draw[-] (4) to (8);
+%         \draw[-] (5) to (9); \draw[-] (6) to (10); \draw[-] (7) to (11); \draw[-] (8) to (12);
+%         \draw[-] (9) to (13); \draw[-] (10) to (14); \draw[-] (11) to (15); \draw[-] (12) to (16);
+%       \end{tikzpicture}
+%     \end{column}
+%     \hfill
+%     \begin{column}{.48\textwidth}
+%       \includegraphics[width=0.8\textwidth]{Figures/AxelrodExample.png}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+% \note{Assumes agents are connected via a square lattice; \emph{homophily} implemented
+% as increased likelihood to interact with similar others.}
 
-\begin{frame}{Axelrod on small-world and scale-free networks}
-  Klemm, et al., (2003)
-\end{frame}
+% \begin{frame}{Axelrod on small-world and scale-free networks}
+%   Klemm, et al., (2003)
+% \end{frame}
 
 \section{Development of scale-free networks}
 \begin{frame}[plain]
@@ -188,7 +188,7 @@ as increased likelihood to interact with similar others.}
   Indicate average/expectation using angle brackets
   \begin{center}
     \begin{itemize}
-      \item $<k> = \frac{1}{N} \sum_{i=1}^N k_i$
+      \item $\langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_i$
       \item $L = \frac{1}{2} \sum_{i=1}^N k_i$, where $1/2$ corrects for double counting 
     \end{itemize}
 
@@ -231,14 +231,14 @@ as increased likelihood to interact with similar others.}
   Average path length:
   \[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{\substack{i=1,\ldots,N \\ j < i}} d_{ij} \]
   
-  $d_{ij}$ and derivative measures found via breadth-first search algorithm.
+  $d_{ij}$ found via breadth-first search algorithm.
 \end{frame}
 
 \begin{frame}{$d_{ij}$ via breadth-first search}
   \centering
   \includegraphics[width=0.75\textwidth]{Figures/bfs.jpg} \\
   % \hline
-  A certain form of breadth-first search is still used for computing 
+  A certain form of breadth-first search is used for computing 
   $\langle d \rangle$ even on the largest of networks such as Facebook
   (see \url{https://arxiv.org/abs/1111.4503v1} and 
   \url{https://arxiv.org/abs/1111.4570} that show $\langle d \rangle \approx 4$
@@ -289,9 +289,11 @@ See notes for that example.}
 
   \underline{Procedure:} 
   \begin{itemize}
-    \item Iterate through all ${N \choose 2}$ pairs of nodes.
-    \item Draw $x \sim \text{Uniform}$. 
-    \item If $x < p$ add link between nodes. 
+    \item Iterate through all ${N \choose 2}$ pairs of nodes. For each node,
+      \begin{itemize}
+        \item Draw $x \sim \text{Uniform}$. 
+        \item If $x < p$ add link between nodes in pair. 
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -310,10 +312,10 @@ See notes for that example.}
 
 \begin{frame}{Degree distribution of random networks}
   \begin{itemize}
-    \item Probability $k$ links at a node is $p^k$.
-    \item Probability $N-1-k$ links are not present at that node: $p^{N-1-k}$.
     \item Number of ways to choose the $k$ links that are present:
       ${N-1 \choose k}$.
+    \item Probability $k$ links at a node is $p^k$.
+    \item Probability $N-1-k$ links are not present at that node: $p^{N-1-k}$.
   \end{itemize}
   Again this leads to a binomial distribution
   \[
@@ -366,7 +368,7 @@ nodes.}
   \includegraphics[width=1.1\textwidth]{Figures/poissonVsRealDegDist.jpg}
 \end{frame}
 
-\begin{frame}{Random network regimes}
+\begin{frame}{Random network connectedness regimes}
   As $p$ increases, random networks go from essentially disconnected, to the
   emergence of a large connected component (the ``giant component''), to
   being totally connected when $p > \frac{\ln N}{N}$. \\[.25em]
@@ -441,12 +443,53 @@ real-world networks would not be connected based on $\langle k \rangle$.}
   \includegraphics[width=0.6\textwidth]{Figures/wattsStrogatz.jpg}
 \end{frame}
 
-\begin{frame}{Scale-free networks}
-  $2 < \gamma < 3$ indicates scale-free because the second moment (variance)
-  diverges.
-
-
+\begin{frame}{Meaning of ``scale-free''}
+  We go to ``continuum formalism'' to make calculations easy. The $k^{th}$
+  moment of $p_k$ is
+  \[
+    \langle k^n \rangle = \sum_{k_{\min}}^\infty k^n p_k = 
+      \int_{k_{\min}}^\infty k^n p(k) dk
+  \]
+  The second moment is used to calculate variance, 
+  $\sigma_k^2 = \langle k^2 \rangle - \langle k \rangle^2$.
+  \vspace{.5em}
+  The power-law degree distribution is $p(k) = Ck^{-\gamma}$. Then
+  \[
+    \langle k^n \rangle = C \int_{k_{\min}}^\infty k^n k^{-\gamma} dk 
+                        = C \Bigl[ k^{n - \gamma + 1} \Bigr|_{k_{\min}}^\infty
+  \]
 \end{frame}
+
+\begin{frame}{Meaning of ``scale-free''}
+  \[
+    \langle k^n \rangle = C \int_{k_{\min}}^\infty k^n k^{-\gamma} dk 
+                        = C \Bigl[ k^{n - \gamma + 1} \Bigr|_{k_{\min}}^\infty
+  \]
+  To finish evaluating this integral, we need to find the limit of the 
+  first term as $k \to \infty$. When is this finite? When
+  \[
+    n - \gamma + 1 \le 0,
+  \]
+  or,
+  \[
+    \gamma \ge n + 1
+  \]
+  So if $2 \le \gamma < 3$, then $\langle k^2 \rangle, \sigma_k \to \infty$,
+  making hubs (large $k$ nodes) much more likely.
+\end{frame}
+
+\begin{frame}{Large $\sigma_k$ in real-world networks}
+  \vspace{-1em}
+  \centering
+  \includegraphics[width=0.7\textwidth]{Figures/largeStddevRealNetworks.jpg}
+\end{frame}
+
+\begin{frame}{Poisson vs. Scale-free}
+  \vspace{-1em}
+  \centering
+  \includegraphics[width=0.75\textwidth]{Figures/poissonVsScalefree.jpg}
+\end{frame}
+
 
 \begin{frame}{$\langle d \rangle$ regimes for scale-free networks}
   \vspace{-1em}
